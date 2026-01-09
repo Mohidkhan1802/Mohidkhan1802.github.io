@@ -1,0 +1,81 @@
+/* Neon glow effect for headings */
+h1, h2, h3 {
+  text-shadow:
+    0 0 5px #00ffff,
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 40px #00ffff;
+}
+
+/* Neon hover for nav links */
+nav .nav-links a:hover {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+/* Neon button glow */
+.hero .btn {
+  background: #00ffff;
+  color: #e40c0c;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
+
+/* Fade-in animation for sections */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+/* When section is in view */
+section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Futuristic animated gradient */
+.hero {
+  position: relative;
+  background: linear-gradient(-45deg, #ece6e6, #001a1a, #0f0f0f, #001a1a);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fffbfb;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glass-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  margin: 50px auto;
+  border-radius: 15px;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.7);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #00ffff;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  margin-top: 50px;
+}
